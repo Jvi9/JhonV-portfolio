@@ -1,60 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const galleries = document.querySelectorAll('.accordion-gallery');
+  const cards = document.querySelectorAll('.project-card');
+  const detailBox = document.querySelector('.project-detail');
+  const titleEl = detailBox.querySelector('.project-title');
+  const tagsEl = detailBox.querySelector('.project-tags');
+  const descEl = detailBox.querySelector('.project-desc');
+  const galleryEl = detailBox.querySelector('.project-gallery');
 
-  galleries.forEach(gallery => {
-    const panels = gallery.querySelectorAll('.panel');
-    const container = gallery.closest('.container, .container-fluid, section') || gallery.parentElement;
-    const detailBox = container ? container.querySelector('.project-detail') : null;
-
-    panels.forEach(panel => {
-      // Hover detail
-      panel.addEventListener('pointerenter', () => {
-        if (detailBox) {
-          const titleEl = detailBox.querySelector('.project-title');
-          const descEl  = detailBox.querySelector('.project-desc');
-          if (titleEl) titleEl.innerHTML = panel.dataset.title || '';
-          if (descEl)  descEl.innerHTML  = panel.dataset.description || '';
-        }
-      });
-
-
-      // Touch toggle for mobile
-      panel.addEventListener('click', (ev) => {
-        const isCoarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
-        if (isCoarse && !ev.target.closest('img')) {
-          const already = panel.classList.contains('active');
-          panels.forEach(p => p.classList.remove('active'));
-          if (!already) panel.classList.add('active');
-          if (detailBox) {
-            const titleEl = detailBox.querySelector('.project-title');
-            const descEl  = detailBox.querySelector('.project-desc');
-            if (titleEl) titleEl.textContent = panel.dataset.title || '';
-            if (descEl)  descEl.textContent  = panel.dataset.description || '';
-          }
-          ev.preventDefault();
-        }
-      });
-
-      // Handle image click for lightbox
-      panel.querySelectorAll('img').forEach(img => {
-        img.addEventListener('click', (ev) => {
-          ev.stopPropagation(); // prevent panel click
-          const lightbox = document.getElementById('lightbox');
-          const lightboxImg = document.getElementById('lightbox-img');
-          lightbox.style.display = 'flex';
-          lightboxImg.src = img.src; // you can change to higher-res src if available
-        });
-      });
-    });
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => showDetails(card));
+    card.addEventListener('click', () => showDetails(card)); // mobile
   });
 
-  // Lightbox close logic
+  function showDetails(card) {
+    // Show box if hidden
+    detailBox.classList.remove('d-none');
+
+    titleEl.textContent = card.dataset.title;
+    tagsEl.textContent = card.dataset.hashtags;
+    //descEl.textContent = card.dataset.description;
+    descEl.innerHTML = card.dataset.description; // instead of textContent
+
+    galleryEl.innerHTML = '';
+
+    if (card.dataset.gallery) {
+      const imgs = card.dataset.gallery.split(',');
+      // Skip the first (cover)
+      imgs.slice(1).forEach(src => {
+        const img = document.createElement('img');
+        img.src = src.trim();
+        img.addEventListener('click', () => openLightbox(src));
+        galleryEl.appendChild(img);
+      });
+    }
+  }
+
+  // Carousel buttons
+  const track = document.querySelector('.carousel-track');
+  document.querySelector('.prev').addEventListener('click', () => track.scrollBy({left: -300, behavior: 'smooth'}));
+  document.querySelector('.next').addEventListener('click', () => track.scrollBy({left: 300, behavior: 'smooth'}));
+
+  // Lightbox
   const lightbox = document.getElementById('lightbox');
-  const closeBtn = document.querySelector('.lightbox .close');
-  closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) lightbox.style.display = 'none';
-  });
+  const lightboxImg = document.getElementById('lightbox-img');
+  document.querySelector('.lightbox .close').addEventListener('click', () => lightbox.style.display = 'none');
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.style.display = 'none'; });
+
+  function openLightbox(src) {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = src;
+  }
 });

@@ -16,137 +16,170 @@
       <h2 class="mb-3">Jhon Vila Solier</h2>
       <p class="lead">Remote Sensing • Water Resources • Hydrology • Python</p>
       <p class="text-muted">
-        Enthusiastic about technology, sustainability, and innovative solutions in hydrology and land management.
+        Enthusiastic about technology, sustainability, and innovative solutions in scalable solutions, hydrology and remote sensing.
       </p>
     </div>
   </section>
 
-  <!-- Section 2: Remote Sensing Projects -->
-  <section id="tech-projects" class="py-5">
-    <div class="container-fluid">
-      <h2 class="text-center mb-4">Remote Sensing Projects</h2>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-2 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-2">Projects</h2>
 
-      <!-- Accordion gallery -->
-      <div class="accordion-gallery">
-        <!-- Project 1 with two stacked images -->
-      <div class="panel"
-          data-title="🎈 Balloon Mosaic Tool"
-          data-description='
-            <div class="project-content d-flex align-items-start">
-              <!-- Text on the left -->
-              <div class="project-text me-3">
-                <p>🧠 <strong>Purpose:</strong><br>
-                An algorithm designed to blend high-resolution balloon imagery using minimal metadata.</p>
+      <!-- Carousel -->
+      <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-track">
+          
+          <!-- Project 1 --> <!-- Balloon Tech -->
+          <div class="project-card"
+              data-title="🎈 Balloon Mosaic Tool"
+              data-description='
+              <p> <strong>Purpose:</strong> Algorithm designed to blend high-resolution balloon imagery with minimal metadata.</p>
+              <p> <strong>Challenges:</strong> Intensive big-data processing of optical and thermal imagery,
+                  leveraging advanced feature detection techniques.</p>
+              <ul>
+                <li>Custom in-house pipeline for optimized imagery processing</li>
+                <li>Designed to handle sparse metadata and correct offset temporal and cover gaps</li>
+                <li>Innovative multi-source integration method that bypasses traditional photogrammetry</li>
+              </ul>'
+              data-hashtags="#RemoteSensing #Programming #OPP"
+              data-gallery="images/tech_project1a.jpg,images/tech_project1b.jpg,images/tech_project1c.jpg,images/tech_project1d.jpg">
+            <img src="images/tech_project1a.jpg" alt="Balloon Mosaic Tool">
+            <h5>Balloon Mosaic Tool</h5>
+            <h6>#RemoteSensing #Python #Backend #DataScience</h6>
+          </div>
 
-                <p>🔍 <strong>Key Features:</strong></p>
+          <!-- Project 2 --> <!-- Balloon Dashboard Tech -->
+          <div class="project-card"
+              data-title="📊 AEROLab"
+              data-description='
+              <p> <strong>Purpose:</strong> A desktop application built with Flask to monitor and process real-time telemetry data during balloon launches.</p>
+              <p> <strong>Challenges:</strong> Integrating a Flask-based dashboard frontend with backend pipelines for real-time mosaic generation and visualization, including the Balloon Mosaic Tool.</p>
+              <ul>
+                <li>Live integration of payload telemetry with dynamic color mapping and threshold-based visual feedback</li>
+                <li>Support for retrospective analysis of previous launches with on-demand mosaic generation</li>
+                <li>Real-time execution of the Balloon Mosaic Tool within a responsive processing framework</li>
+                <li>Hosted on an in-house server to ensure data privacy and low-latency performance</li>
+              </ul>'
+              data-hashtags="#Python #Flask #DataScience"
+              data-gallery="images/tech_project2a.jpg,images/tech_project2b.jpg,images/tech_project2c.jpg">
+            <img src="images/tech_project2a.jpg" alt="Regression Dashboard">
+            <h5>AEROLab</h5>
+            <h6>#RemoteSensing #Flask #Frontend #Backend</h6>
+          </div>
+
+          <!-- Project 3 --> <!-- Terrasight -->
+          <div class="project-card"
+              data-title="🛰️ Advanced geospatial intelligence platform"
+            data-description='
+              <p><strong>Purpose:</strong> A web-based platform combining spatial analysis, machine learning, and real-time data rendering for geospatial intelligence applications.</p>
+              <p><strong>Challenges:</strong> This project involved building scalable pipelines using Dagster to ingest geospatial datasets from multiple APIs, managing a PostgreSQL/PostGIS database, and deploying ML-driven spatial workflows. The platform was hosted on AWS, with distributed processing powered by Spark and Apache Sedona.</p>
+              <ul>
+                <li>Designed and orchestrated data pipelines for multi-source geospatial ingestion using Dagster</li>
+                <li>Managed spatial databases with PostgreSQL/PostGIS for efficient querying and analysis</li>
+                <li>Implemented ML pipelines for classification and prediction of remote sensing data</li>
+                <li>Optimized large-scale spatial benchmarks using Spark and Apache Sedona</li>
+                <li>Deployed platform and workflows on AWS with S3-based data exchange and storage</li>
+              </ul>'
+              data-hashtags="#RemoteSensing #PostGIS #ApacheSedona #AWS"
+              data-gallery="images/tech_project3a.jpg,images/tech_project3b.jpg,images/tech_project3c.jpg,images/tech_project3d.jpg">
+            <img src="images/tech_project3a.jpg" alt="Remote Sensing Classifier">
+            <h5>Advanced geospatial intelligence platform</h5>
+            <h6>#RemoteSensing #Backend #SQL #PostGIS #ApacheSedona</h6>
+          </div>
+
+          <!-- Project 4 --> <!-- Thesis GPM -->
+          <div class="project-card"
+              data-title="🛰️ Precipitation Downscaling Modelling"
+              data-description='
+                <p><strong>Purpose:</strong> A hydrological modeling study focused on improving precipitation representation in the Peruvian Andes to assess hydropower potential under climate change scenarios.</p>
+                <p><strong>Challenges:</strong> Addressed data scarcity by downscaling satellite-based GPM precipitation data using regression techniques, and simulated streamflow using the SWAT+ model with multiple precipitation datasets. The study evaluated spatial accuracy and hydrological performance to support future hydropower planning.</p>
                 <ul>
-                  <li>Feature detection to bypass conventional photogrammetry limitations</li>
-                  <li>Optimized for time efficiency and low metadata environments</li>
-                </ul>
+                  <li>Developed a downscaling algorithm to refine GPM data from 1° to 1 km resolution using NDVI and elevation</li>
+                  <li>Applied exponential, multilinear, and Geographically Weighted Regression (GWR); GWR yielded highest accuracy</li>
+                  <li>Simulated river discharge using SWAT+ with downscaled GPM, raw GPM, and PISCOp datasets</li>
+                  <li>Validated model performance with NSE metrics during calibration and validation phases</li>
+                  <li>Identified PISCOp as the most reliable dataset for streamflow representation in the Alto Huallaga catchment</li>
+                </ul>'
+              data-hashtags="#RemoteSensing #PostGIS #MachineLearning"
+              data-gallery="images/tech_project4a.jpg,images/tech_project4b.jpg,images/tech_project4c.jpg">
+            <img src="images/tech_project4a.jpg" alt="d-none">
+            <h5>Precipitation Downscaling Modelling</h5>
+            <h6>#RemoteSensing #GIS #Hydrology</h6>
+          </div>
 
-                <p>🛠️ <strong>Technologies Used:</strong></p>
-                <ul>
-                  <li>OpenCV – for image processing and feature detection</li>
-                  <li>Pandas – for data manipulation</li>
-                  <li>NumPy – for numerical operations</li>
-                  <li>Rasterio – for handling geospatial raster data</li>
-                </ul>
-              </div>
+          <!-- Project 5 --> <!-- Automatic Hydrometric station Chuspiri -->
+          <div class="project-card"
+              data-title="🛰️ Hydrometric Station Chuspiri"
+              data-description="Monitoring water levels in the Chuspiri River."
+              data-hashtags="#RemoteSensing #Hydrology #GIS"
+              data-gallery="images/tech_project5a.jpg,images/tech_project5b.jpg,images/tech_project5c.jpg">
+            <img src="images/tech_project5a.jpg" alt="Hydrometric Station Chuspiri">
+            <h5>Hydrometric Station Chuspiri</h5>
+            <h6>#Hydrometry #Hydrology #GIS #Telemetry</h6>
+          </div>
 
-              <!-- Image on the right -->
-              <div class="project-figure flex-shrink-0">
-                <figure>
-                  <img src="images/tech_project1c.jpg" alt="Mosaic Example" style="max-width:60%; border-radius:6px;">
-                  <figcaption>Example output of Balloon Mosaic Tool</figcaption>
-                </figure>
-              </div>
-            </div>
-          '>
-        <div class="panel-images">
-          <img src="images/tech_project1a.jpg" alt="Balloon tool img 1">
-          <img src="images/tech_project1b.jpg" alt="Balloon tool img 2">
+          <!-- Project 6 --> <!-- Hydrometric station Clarification dam -->
+          <div class="project-card"
+              data-title="🛰️ Hydrometric Station Clarification Dam"
+              data-description="Monitoring water levels in the Clarification Dam."
+              data-hashtags="#RemoteSensing #Hydrology #GIS"
+              data-gallery="images/tech_project6a.jpg,images/tech_project6b.jpg,images/tech_project6c.jpg">
+            <img src="images/tech_project6a.jpg" alt="Hydrometric Station Clarification Dam">
+            <h5>Hydrometric Station Clarification Dam</h5>
+            <h6>#Hydrometry #Hydrology #GIS #Telemetry</h6>
+          </div>
+
+          <!-- Project 7 --> <!-- Automatic station Water Quality -->
+          <div class="project-card"
+              data-title="🛰️ Automatic Water Quality Monitoring"
+              data-description="Real-time monitoring of water quality parameters in rivers."
+              data-hashtags="#RemoteSensing #Hydrology #GIS"
+              data-gallery="images/tech_project7a.jpg,images/tech_project7b.jpg,images/tech_project7c.jpg">
+            <img src="images/tech_project7a.jpg" alt="Automatic Water Quality Monitoring">
+            <h5>Automatic Water Quality Monitoring</h5>
+            <h6>#Hydrometry #Hydrology #GIS #Telemetry</h6>
+          </div>
+
+          <!-- Project 8 --> <!-- Monitoring Campains Water Flow and Quality -->
+          <div class="project-card"
+              data-title="🛰️ Monitoring Campains Water Flow and Quality"
+              data-description="Real-time monitoring of water quality parameters in rivers."
+              data-hashtags="#RemoteSensing #Hydrology #GIS"
+              data-gallery="images/tech_project8a.jpg,images/tech_project8b.jpg,images/tech_project8c.jpg,images/tech_project8d.jpg">
+            <img src="images/tech_project8a.jpg" alt="Monitoring Campains Water Flow and Quality">
+            <h5>Monitoring Campains Water Flow and Quality</h5>
+            <h6>#Hydrometry #Hydrology #GIS #Telemetry</h6>
+          </div>
+
         </div>
+        <button class="carousel-btn next">&#10095;</button>
       </div>
 
-        <!-- Project 2 -->
-        <div class="panel"
-            data-title="Regression Dashboard"
-            data-description="Flask dashboard for modeling datasets like chickens vs forests.">
-          <div class="panel-images">
-            <img src="images/tech_project2a.jpg" alt="Dashboard img 1">
-            <img src="images/tech_project2b.jpg" alt="Dashboard img 2">
+      <!-- Detail box (hidden by default) -->
+      <div class="project-detail mt-4 p-3 border rounded shadow-sm bg-white d-none">
+        <div class="row">
+          <!-- Left: text -->
+          <div class="col-md-6 text-start">
+            <h4 class="project-title"></h4>
+            <p class="project-desc text-muted"></p>
+            <p class="project-tags fw-bold text-primary"></p>
+          </div>
+          <!-- Right: stacked images -->
+          <div class="col-md-6">
+            <div class="project-gallery d-flex flex-column gap-2 align-items-center"></div>
           </div>
         </div>
-
-        <!-- Project 3 -->
-        <div class="panel"
-            data-title="Remote Sensing Classifier"
-            data-description="Automated land cover classification pipeline.">
-          <div class="panel-images">
-            <img src="images/tech_project3a.jpg" alt="Classifier img 1">
-            <img src="images/tech_project3b.jpg" alt="Classifier img 2">
-          </div>
-        </div>
-      </div>
-
-      <!-- Detail box: note classes, not IDs -->
-      <div class="project-detail text-center mt-3">
-        <h4 class="project-title">Hover a project</h4>
-        <p class="project-desc text-muted">Move the cursor over a panel or tap on it (mobile) to see details here.</p>
       </div>
     </div>
   </section>
 
-    </div>
-  </section>
-
-  <!-- Section 3: Water Resources Projects -->
-  <section id="water-projects" class="py-5 bg-light">
-    <div class="container-fluid">
-      <h2 class="text-center mb-4">Water Resources Projects</h2>
-      <div class="accordion-gallery">
-        <div class="panel" style="background-image: url('water_project1.jpg');" 
-             onclick="expandPanel(this)" data-title="Hydraulic Infrastructure Design" 
-             data-description="Engineering plans and models for water distribution systems.">
-        </div>
-        <div class="panel" style="background-image: url('water_project2.jpg');" 
-             onclick="expandPanel(this)" data-title="Flood Risk Mapping" 
-             data-description="GIS-based analysis of flood-prone regions.">
-        </div>
-      </div>
-      <div class="project-detail text-center mt-3">
-        <h4 id="projectTitle">Select a project</h4>
-        <p id="projectDescription" class="text-muted">Click on a panel to see details here.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 4: Research Projects -->
-  <section id="research-projects" class="py-5">
-    <div class="container-fluid">
-      <h2 class="text-center mb-4">Research Projects</h2>
-      <div class="accordion-gallery">
-        <div class="panel" style="background-image: url('research_project1.jpg');" 
-             onclick="expandPanel(this)" data-title="River Modeling Study" 
-             data-description="Hydrodynamic simulations for sustainable river management.">
-        </div>
-        <div class="panel" style="background-image: url('research_project2.jpg');" 
-             onclick="expandPanel(this)" data-title="Water Quality Monitoring" 
-             data-description="Study of pollutants in watersheds with sensor networks.">
-        </div>
-      </div>
-      <div class="project-detail text-center mt-3">
-        <h4 id="projectTitle">Select a project</h4>
-        <p id="projectDescription" class="text-muted">Click on a panel to see details here.</p>
-      </div>
-    </div>
-  </section>
-  
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img" alt="Full size project image">
-</div>
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Full size project image">
+  </div>
 
   <!-- Bootstrap JS + Custom JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
