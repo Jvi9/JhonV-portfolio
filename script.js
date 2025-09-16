@@ -50,3 +50,26 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxImg.src = src;
   }
 });
+
+
+
+function showDetails(card) {
+  detailBox.classList.remove('d-none');
+  detailBox.classList.remove('visible'); // reset
+  setTimeout(() => detailBox.classList.add('visible'), 10);
+
+  titleEl.textContent = card.dataset.title;
+  tagsEl.textContent = card.dataset.hashtags;
+  descEl.innerHTML = card.dataset.description;
+  galleryEl.innerHTML = '';
+
+  if (card.dataset.gallery) {
+    const imgs = card.dataset.gallery.split(',');
+    imgs.slice(1).forEach(src => {
+      const img = document.createElement('img');
+      img.src = src.trim();
+      img.addEventListener('click', () => openLightbox(src));
+      galleryEl.appendChild(img);
+    });
+  }
+}

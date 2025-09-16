@@ -29,7 +29,8 @@
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(71, 98, 139, 0.18);
 }
 
 /* Make the image bigger */
@@ -43,9 +44,10 @@
 
 /* Make text smaller and subtle */
 .project-card h5 {
-  font-size: 0.95rem; /* smaller title */
-  margin-bottom: 0.2rem;
-  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.0rem;
+  font-weight: 500;
+  color: #22335b;
 }
 
 .project-card h6 {
@@ -70,10 +72,22 @@
 .prev { position: absolute; left: -2rem; }
 .next { position: absolute; right: -2rem; }
 
+.carousel-btn:focus {
+  outline: 2px solid #0b5ed7;
+  outline-offset: 2px;
+  transform: scale(1.1);
+}
+
 /* Detail box */
 .project-detail {
   max-width: 1200px;
   margin: 0 auto;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.project-detail.visible {
+  opacity: 1;
 }
 
 .project-gallery img {
