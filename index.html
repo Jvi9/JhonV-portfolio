@@ -8,16 +8,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- Section 1: About -->
-  <section id="about" class="py-5 bg-light text-center">
+  <section id="about"  class="py-5 text-center position-relative">
     <div class="container">
-      <img src="images/profile.jpg" alt="Profile picture" class="rounded-circle mb-3" width="150" height="150">
-      <h2 class="mb-3">Jhon Vila Solier</h2>
-      <p class="lead">Remote Sensing • Water Resources • Hydrology • Python</p>
-      <p class="text-muted">
-        Enthusiastic about technology, sustainability, and innovative solutions in scalable solutions, hydrology and remote sensing.
-      </p>
+      <div class="row align-items-center">
+        <!-- Profile Image & Name -->
+        <div class="col-md-4 text-center">
+          <img src="images/profile.jpg" alt="Profile picture" class="rounded-circle mb-3" width="150" height="150">
+          <h2 class="mb-2">Jhon Vila Solier</h2>
+          <p class="lead">• 🌍 Remote Sensing • 💧 Water Resources <br>• 🌊 Hydrology • 🐍 Programming • 🌐 GIS</p>
+          <a href="https://drive.google.com/file/d/16i03LmaChr52s2q1cBy0rUiRSShkW4yB/view?usp=sharing" class="btn btn-primary mt-3" target="_blank" download>
+            📄 Download CV
+          </a>
+        </div>
+
+        <!-- Bio -->
+        <div class="col-md-8">
+          <p class="text-muted">
+            I'm a remote sensing specialist and hydrology enthusiast passionate about transforming environmental data into actionable insights. My work bridges environmental science and technology, focusing on scalable solutions for water resource management, real-time monitoring, and geospatial intelligence.
+          </p>
+          <p class="text-muted">
+            From deploying sensors in rugged terrain to downscaling satellite data for hydropower planning, I thrive at the intersection of fieldwork and code. I believe in making complex systems transparent and accessible through innovation and collaboration.
+          </p>
+          <p class="text-muted">
+            This portfolio showcases a selection of my projects—designed to be technically sound yet approachable. If something sparks your interest, feel free to reach out. I'm always open to new ideas and conversations.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -38,12 +55,13 @@
               <p> <strong>Purpose:</strong> Algorithm designed to blend high-resolution balloon imagery with minimal metadata.</p>
               <p> <strong>Challenges:</strong> Intensive big-data processing of optical and thermal imagery,
                   leveraging advanced feature detection techniques.</p>
+              <p> Key Features & Achievements:</p>
               <ul>
                 <li>Custom in-house pipeline for optimized imagery processing</li>
                 <li>Designed to handle sparse metadata and correct offset temporal and cover gaps</li>
                 <li>Innovative multi-source integration method that bypasses traditional photogrammetry</li>
               </ul>'
-              data-hashtags="#RemoteSensing #Programming #OPP"
+              data-hashtags="#RemoteSensing #Python #OPP"
               data-gallery="images/tech_project1a.jpg,images/tech_project1b.jpg,images/tech_project1c.jpg,images/tech_project1d.jpg">
             <img src="images/tech_project1a.jpg" alt="Balloon Mosaic Tool">
             <h5>Balloon Mosaic Tool</h5>
@@ -56,13 +74,14 @@
               data-description='
               <p> <strong>Purpose:</strong> A desktop application built with Flask to monitor and process real-time telemetry data during balloon launches.</p>
               <p> <strong>Challenges:</strong> Integrating a Flask-based dashboard frontend with backend pipelines for real-time mosaic generation and visualization, including the Balloon Mosaic Tool.</p>
+              <p> Key Features & Achievements:</p>
               <ul>
                 <li>Live integration of payload telemetry with dynamic color mapping and threshold-based visual feedback</li>
                 <li>Support for retrospective analysis of previous launches with on-demand mosaic generation</li>
                 <li>Real-time execution of the Balloon Mosaic Tool within a responsive processing framework</li>
                 <li>Hosted on an in-house server to ensure data privacy and low-latency performance</li>
               </ul>'
-              data-hashtags="#Python #Flask #DataScience"
+              data-hashtags="#Python #Flask #DataScience #OPP"
               data-gallery="images/tech_project2a.jpg,images/tech_project2b.jpg,images/tech_project2c.jpg">
             <img src="images/tech_project2a.jpg" alt="Regression Dashboard">
             <h5>AEROLab</h5>
@@ -75,6 +94,7 @@
             data-description='
               <p><strong>Purpose:</strong> A web-based platform combining spatial analysis, machine learning, and real-time data rendering for geospatial intelligence applications.</p>
               <p><strong>Challenges:</strong> This project involved building scalable pipelines using Dagster to ingest geospatial datasets from multiple APIs, managing a PostgreSQL/PostGIS database, and deploying ML-driven spatial workflows. The platform was hosted on AWS, with distributed processing powered by Spark and Apache Sedona.</p>
+              <p> Key Features & Achievements:</p>
               <ul>
                 <li>Designed and orchestrated data pipelines for multi-source geospatial ingestion using Dagster</li>
                 <li>Managed spatial databases with PostgreSQL/PostGIS for efficient querying and analysis</li>
@@ -82,19 +102,20 @@
                 <li>Optimized large-scale spatial benchmarks using Spark and Apache Sedona</li>
                 <li>Deployed platform and workflows on AWS with S3-based data exchange and storage</li>
               </ul>'
-              data-hashtags="#RemoteSensing #PostGIS #ApacheSedona #AWS"
+              data-hashtags="#RemoteSensing #PostGIS #ApacheSedona #AWS #Orquestration"
               data-gallery="images/tech_project3a.jpg,images/tech_project3b.jpg,images/tech_project3c.jpg,images/tech_project3d.jpg">
             <img src="images/tech_project3a.jpg" alt="Remote Sensing Classifier">
             <h5>Advanced geospatial intelligence platform</h5>
-            <h6>#RemoteSensing #Backend #SQL #PostGIS #ApacheSedona</h6>
+            <h6>#RemoteSensing #Backend #SQL #PostGIS #ApacheSedona #Dagster</h6>
           </div>
 
           <!-- Project 4 --> <!-- Thesis GPM -->
           <div class="project-card"
-              data-title="🛰️ Precipitation Downscaling Modelling"
+              data-title="🏔️ Precipitation Downscaling Modelling"
               data-description='
                 <p><strong>Purpose:</strong> A hydrological modeling study focused on improving precipitation representation in the Peruvian Andes to assess hydropower potential under climate change scenarios.</p>
                 <p><strong>Challenges:</strong> Addressed data scarcity by downscaling satellite-based GPM precipitation data using regression techniques, and simulated streamflow using the SWAT+ model with multiple precipitation datasets. The study evaluated spatial accuracy and hydrological performance to support future hydropower planning.</p>
+                <p> Key Features & Achievements:</p>
                 <ul>
                   <li>Developed a downscaling algorithm to refine GPM data from 1° to 1 km resolution using NDVI and elevation</li>
                   <li>Applied exponential, multilinear, and Geographically Weighted Regression (GWR); GWR yielded highest accuracy</li>
@@ -111,9 +132,19 @@
 
           <!-- Project 5 --> <!-- Automatic Hydrometric station Chuspiri -->
           <div class="project-card"
-              data-title="🛰️ Hydrometric Station Chuspiri"
-              data-description="Monitoring water levels in the Chuspiri River."
-              data-hashtags="#RemoteSensing #Hydrology #GIS"
+              data-title="📡 Hydrometric Station Chuspiri"
+              data-description='
+                <p><strong>Purpose:</strong> To monitor real-time water flow in the Chuspiri catchment area, which supplies the primary water source for the mine.</p>
+                <p><strong>Challenges:</strong> The station is located in a remote area, making telemetry communication difficult. A signal repeater was required to bridge the connection between the station and the control center.</p>
+                <p> Key Features & Achievements:</p>
+                <ul>
+                  <li>Installed a flume to accurately measure water flow.</li>
+                  <li>Automated data collection and processing using a PLC (Programmable Logic Controller).</li>
+                  <li>Conducted a hydrologic study based on a 20-year return period to ensure long-term reliability.</li>
+                  <li>Established a real-time telemetry link with the central monitoring system.</li>
+                  <li>Developed hydraulic programming to automatically calculate water levels using radar sensor data.</li>
+                </ul>'              
+              data-hashtags="#Hydrometry #Hydrology #Telemetry"
               data-gallery="images/tech_project5a.jpg,images/tech_project5b.jpg,images/tech_project5c.jpg">
             <img src="images/tech_project5a.jpg" alt="Hydrometric Station Chuspiri">
             <h5>Hydrometric Station Chuspiri</h5>
@@ -122,9 +153,18 @@
 
           <!-- Project 6 --> <!-- Hydrometric station Clarification dam -->
           <div class="project-card"
-              data-title="🛰️ Hydrometric Station Clarification Dam"
-              data-description="Monitoring water levels in the Clarification Dam."
-              data-hashtags="#RemoteSensing #Hydrology #GIS"
+              data-title="📡 Hydrometric Station Clarification Dam"
+              data-description='
+                <p><strong>Purpose:</strong> To continuously monitor and record the volume of water being discharged from the mine into the adjacent river system, ensuring environmental compliance and operational transparency.</p>
+                <p><strong>Challenges:</strong> The monitoring station is positioned downstream of a wide spillway, which required engineering solutions to channel and concentrate the dispersed flow into a measurable stream. This involved designing a custom structure to guide the water efficiently toward the measuring instruments, overcoming the challenge of uncontrolled spread due to the spillway’s large width.</p>
+                <p> Key Features & Achievements:</p>
+                <ul>
+                  <li>Installed a V-notch weir to accurately measure water flow.</li>
+                  <li>Automated data collection and processing using a PLC (Programmable Logic Controller).</li>
+                  <li>Established a real-time telemetry link with the central monitoring system.</li>
+                  <li>Developed hydraulic programming to automatically calculate water levels using radar sensor data.</li>
+                </ul>'                  
+              data-hashtags="#Hydrometry #Hydrology #Telemetry"
               data-gallery="images/tech_project6a.jpg,images/tech_project6b.jpg,images/tech_project6c.jpg">
             <img src="images/tech_project6a.jpg" alt="Hydrometric Station Clarification Dam">
             <h5>Hydrometric Station Clarification Dam</h5>
@@ -133,9 +173,17 @@
 
           <!-- Project 7 --> <!-- Automatic station Water Quality -->
           <div class="project-card"
-              data-title="🛰️ Automatic Water Quality Monitoring"
-              data-description="Real-time monitoring of water quality parameters in rivers."
-              data-hashtags="#RemoteSensing #Hydrology #GIS"
+              data-title="💧 Automatic Water Quality Monitoring"
+              data-description='
+                <p><strong>Purpose:</strong> To ensure operational transparency by continuously monitoring water quality before it is discharged from the mine into the river. This system supports environmental compliance and responsible resource management.</p>
+                <p><strong>Challenges:</strong> The monitoring station is located within the clarification dam and operates entirely on solar power. The platform is equipped with multiple water quality sensors—including pH, dissolved oxygen (DO), turbidity, and suspended solids (SST). Installation was particularly complex due to the need to stretch a long cable across the dam to connect the main control line. This cable enables the movement of the floating platform in and out of the dam for maintenance and calibration.</p>
+                <p> Key Features & Achievements:</p>
+                <ul>
+                  <li>Deployed five advanced sensors for precise water quality measurement.</li>
+                  <li>Integrated automated data acquisition and control via a PLC (Programmable Logic Controller).</li>
+                  <li>Established a real-time telemetry connection with the central monitoring system for continuous data transmission and analysis.</li>
+                </ul>'                  
+              data-hashtags="#Hydrometry #Hydrology #WaterQuality" 
               data-gallery="images/tech_project7a.jpg,images/tech_project7b.jpg,images/tech_project7c.jpg">
             <img src="images/tech_project7a.jpg" alt="Automatic Water Quality Monitoring">
             <h5>Automatic Water Quality Monitoring</h5>
@@ -144,13 +192,31 @@
 
           <!-- Project 8 --> <!-- Monitoring Campains Water Flow and Quality -->
           <div class="project-card"
-              data-title="🛰️ Monitoring Campains Water Flow and Quality"
-              data-description="Real-time monitoring of water quality parameters in rivers."
-              data-hashtags="#RemoteSensing #Hydrology #GIS"
+              data-title="🌦️ Monitoring Campaigns – Water Flow and Quality"
+              data-description='
+                <p><strong>Purpose:</strong> To ensure operational transparency and environmental stewardship by continuously monitoring water quality and flow dynamics in high-energy river systems across Peru. These efforts support regulatory compliance and sustainable mining practices.</p>
+
+                <p><strong>Challenges:</strong> Monitoring stations were deployed in remote and hydrologically intense river environments, often requiring solar-powered platforms and ruggedized instrumentation. In one case, a floating station was installed inside a clarification dam, equipped with multiple sensors (pH, dissolved oxygen, turbidity, and suspended solids). Installation demanded a long-span cable system across the dam to mobilize the platform for maintenance and calibration.</p>
+
+                <p><strong>Field Campaigns:</strong> Complementary fieldwork was conducted to validate and enrich real-time data:</p>
+                <ul>
+                  <li><strong>ADCP Surveys:</strong> Used to measure flow velocity profiles and discharge across wide river sections, especially during peak flow conditions.</li>
+                  <li><strong>ADV Deployments:</strong> Captured high-resolution velocity data near the riverbed to understand turbulence and sediment transport.</li>
+                  <li><strong>Manual Sampling:</strong> Collected water samples for laboratory analysis of chemical and physical parameters, including SST concentrations and trace elements.</li>
+                </ul>
+
+                <p><strong>Key Features & Achievements:</strong></p>
+                <ul>
+                  <li>Deployed five advanced water quality sensors for continuous monitoring.</li>
+                  <li>Automated data acquisition and control via PLC (Programmable Logic Controller).</li>
+                  <li>Established real-time telemetry links with central monitoring systems.</li>
+                  <li>Integrated field campaign data with GIS and remote sensing for basin-wide analysis.</li>
+                </ul>'
+              data-hashtags="#Hydrology #ADCP #ADV #WaterQuality"
               data-gallery="images/tech_project8a.jpg,images/tech_project8b.jpg,images/tech_project8c.jpg,images/tech_project8d.jpg">
             <img src="images/tech_project8a.jpg" alt="Monitoring Campains Water Flow and Quality">
             <h5>Monitoring Campains Water Flow and Quality</h5>
-            <h6>#Hydrometry #Hydrology #GIS #Telemetry</h6>
+            <h6>#Hydrology #WaterQuality</h6>
           </div>
 
         </div>
